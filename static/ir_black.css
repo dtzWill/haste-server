@@ -39,8 +39,11 @@
 .hljs-cdata,
 .hljs-filter .hljs-argument,
 .hljs-attr_selector,
+.hljs-preprocessor,
 .apache .hljs-cbracket,
 .hljs-date,
+.asciidoc .hljs-header,
+.markdown .hljs-header,
 .coffeescript .hljs-attribute {
   color: #a8ff60;
 }
