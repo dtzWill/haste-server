@@ -20,7 +20,7 @@
 
 .hljs-keyword,
 .hljs-tag,
-.tex .hljs-command,
+.hljs-command,
 .hljs-request,
 .hljs-status,
 .clojure .hljs-attribute {
@@ -42,8 +42,7 @@
 .hljs-preprocessor,
 .apache .hljs-cbracket,
 .hljs-date,
-.asciidoc .hljs-header,
-.markdown .hljs-header,
+.hljs-header,
 .coffeescript .hljs-attribute {
   color: #a8ff60;
 }
