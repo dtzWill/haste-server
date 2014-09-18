@@ -112,11 +112,11 @@ textarea {
 #box1 {
 	padding: 5px;
 	text-align: center;
-	background: #00222b;
+	background: #000000;
 }
 
 #box2 {
-	background: #08323c;
+	background: #000000;
 	font-size: 0px;
 	padding: 0px 5px;
 }
@@ -163,7 +163,7 @@ textarea {
 }
 
 #box3, #messages li {
-	background: #173e48;
+	background: #000000;
 	font-family: Helvetica, sans-serif;
 	font-size: 12px;
 	line-height: 14px;
