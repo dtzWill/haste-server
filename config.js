@@ -28,7 +28,7 @@
     "host": "redis",
     "port": 6379,
     "db": 2,
-    "expire": 2592000
+    "expire": 94610000
   },
 
   "documents": {
