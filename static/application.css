@@ -85,6 +85,19 @@ textarea {
 	background: transparent !important; /* don't hide hastebox */
 }
 
+#upload-link {
+	text-align:center;
+	margin:10px;
+}
+
+#upload-link a, #upload-link a:visited {
+	color:#9d9d9d;
+}
+
+#upload-link a:hover {
+	color:#fff;
+}
+
 #recent-pastes-title {
 	text-align:center;
 	margin:10px;
