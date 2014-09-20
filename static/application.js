@@ -113,7 +113,18 @@ var haste = function(appName, options) {
       var href = '/' + data.key + ext;
       if (data.metadata.name && data.metadata.mimetype.indexOf('text') < 0) {
         href = '/docs' + href;
+
+        // Add to recents list
+        // Since the /docs/ version won't do so.
+        var recents = _this.getRecents();
+        recents = recents.filter(function(item) {
+          return item !== data.key;
+        });
+        recents.unshift(data.key);
+        recents = recents.slice(0, recents.length > 20 ? 20 : recents.length);
+        localStorage.setItem('recents', JSON.stringify(recents));
       }
+
       window.location.assign(href);
     },
     onUploadError: function(id, message) {
