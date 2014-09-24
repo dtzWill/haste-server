@@ -5,6 +5,8 @@
 FROM dockerfile/nodejs
 MAINTAINER Will Dietz <w@wdtz.org>
 
+RUN apt-get update && apt-get upgrade -qqy
+
 RUN git clone https://github.com/dtzWill/haste-server.git /opt/haste
 WORKDIR /opt/haste
 
