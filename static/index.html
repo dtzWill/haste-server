@@ -60,14 +60,20 @@
 					<div class="label">&nbsp;</div>
 					<div class="shortcut">&nbsp;</div>
 				</div>
-				<div id="wrap-toggle">
-					<input type="checkbox" name="wrap" id="wrapCheck">
-					<a href="#" id="wrapToggle">Wrap Text</a>
+			</div>
+			<div id="settings-title">Current Settings</div>
+			<div id="settings">
+				<div id="wrap-status">
+				<input type="checkbox" name="wrap" id="wrapCheck" disabled="disabled">Wrapping
 				</div>
-				<div id="upload-link">
+				<div id="lines-status">
+				<input type="checkbox" name="lines" id="nosCheck" disabled="disabled">Line Numbers
+				</div>
+			</div>
+			<div id="actions">
+					<a href="#" id="wrapToggle" class="cssbtn">Wrap Toggle</a>
 					<input type="file" name="files[]" multiple="multiple" id="fileElem" style="display:none">
-					<a href="#" id="fileSelect">Upload Local</a>
-				</div>
+					<a href="#" id="fileSelect" class="cssbtn">Upload Local</a>
 			</div>
 
 			<div id="recent-pastes-title">Recent Posts</div>

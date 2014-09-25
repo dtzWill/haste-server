@@ -85,21 +85,45 @@ textarea {
 	background: transparent !important; /* don't hide hastebox */
 }
 
-#upload-link, #wrap-toggle {
-	text-align:center;
+a.cssbtn, a.cssbtn:link, a.cssbtn:visited {
+display:inline-block;
+color:#FFFFFF;
+background-color:#8d8dbd;
+font-weight:bold;
+font-size:12px;
+text-align:center;
+padding-left:10px;
+padding-right:10px;
+padding-top:3px;
+padding-bottom:4px;
+text-decoration:none;
+margin-left:0;
+/*margin-left:5px;*/
+margin-top:0px;
+margin-bottom:5px;
+border:1px solid #aaaaaa;
+border:1px solid #8d8dbd;
+border-radius:5px;
+white-space:nowrap;
+}
+
+a.cssbtn:hover, a.cssbtn:active {
+background-color:#ffffff;
+color:#8d8dbd;
+}
+
+#settings {
+	border:1px solid #aaaaaa;
+	border:1px solid #8d8dbd;
+	border-radius:5px;
 	margin:10px;
 }
 
-#wrap-toggle a, #wrap-toggle a:visited,
-#upload-link a, #upload-link a:visited {
-	color:#9d9d9d;
+#actions {
+	text-align:center;
 }
 
-#wrap-toggle a:hover,
-#upload-link a:hover {
-	color:#fff;
-}
-
+#settings-title,
 #recent-pastes-title {
 	text-align:center;
 	margin:10px;

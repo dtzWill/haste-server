@@ -531,8 +531,15 @@ $(function() {
 });
 
 function setWrapping(wrap) {
-  $('#box').toggleClass('wrapped', wrap);
-  $('#linenos').toggle(!wrap);
+	$('#box').toggleClass('wrapped', wrap);
+	$('#linenos').toggle(!wrap);
+
+	$('#wrapCheck').prop('checked', wrap);
+	$('#nosCheck').prop('checked', !wrap);
+}
+
+function toggleWrapping() {
+	setWrapping(!$('#wrapCheck').prop('checked'));
 };
 
 $(function() {
@@ -546,19 +553,13 @@ fileSelect.addEventListener("click", function (e) {
   e.preventDefault(); // prevent navigation to "#"
 }, false);
 
-var wrapLink = document.getElementById("wrapToggle"),
-    wrapCheck = document.getElementById("wrapCheck");
+var wrapLink = document.getElementById("wrapToggle");
 
 // Associate link with checkbox
 wrapLink.addEventListener("click", function (e) {
-  if (wrapCheck) {
-    wrapCheck.click();
-  }
+	toggleWrapping();
   e.preventDefault();
 }, false);
 
-// Hook check box and actually change wrapping behavior
-wrapCheck.addEventListener("click", function(e) {
-  setWrapping(this.checked);
-}, false);
+setWrapping(true);
 });
