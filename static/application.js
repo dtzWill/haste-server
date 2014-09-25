@@ -134,6 +134,15 @@ var haste = function(appName, options) {
   $('body').dmUploader(fileUploadOpts);
 };
 
+haste.prototype.linkify = function() {
+  // Convert 'link_url' elements into functioning links!
+  // Snippet based on code found here: http://stackoverflow.com/a/5215392
+  $('.hljs-link_url').replaceWith(function() {
+    var url = $.trim($(this).text());
+    return '<a href="' + url + '" target="_blank">' + url + '</a>';
+  });
+};
+
 // Set the page title - include the appName
 haste.prototype.setTitle = function(ext) {
   var title = ext ? this.appName + ' - ' + ext : this.appName;
@@ -300,6 +309,7 @@ haste.prototype.loadDocument = function(key) {
   _this.doc.load(key, function(ret) {
     if (ret) {
       _this.$code.html(ret.value);
+      _this.linkify();
       _this.setTitle(ret.key);
       _this.fullKey();
       _this.$textarea.val('').hide();
