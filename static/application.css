@@ -85,15 +85,17 @@ textarea {
 	background: transparent !important; /* don't hide hastebox */
 }
 
-#upload-link {
+#upload-link, #wrap-toggle {
 	text-align:center;
 	margin:10px;
 }
 
+#wrap-toggle a, #wrap-toggle a:visited,
 #upload-link a, #upload-link a:visited {
 	color:#9d9d9d;
 }
 
+#wrap-toggle a:hover,
 #upload-link a:hover {
 	color:#fff;
 }
@@ -226,4 +228,17 @@ textarea {
 
 #messages li.error {
 	background:rgba(102,8,0,0.8);
+}
+
+/*
+  Enable wrapping if 'wrapped' is set on pre containing the code.
+  Styles found at:
+  http://css-tricks.com/snippets/css/make-pre-text-wrap/
+*/
+#textcontent pre.wrapped {
+ white-space: pre-wrap;       /* css-3 */
+ white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+ white-space: -pre-wrap;      /* Opera 4-6 */
+ white-space: -o-pre-wrap;    /* Opera 7 */
+ word-wrap: break-word;       /* Internet Explorer 5.5+ */
 }

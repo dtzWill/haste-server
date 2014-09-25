@@ -530,6 +530,11 @@ $(function() {
   });
 });
 
+function setWrapping(wrap) {
+  $('#box').toggleClass('wrapped', wrap);
+  $('#linenos').toggle(!wrap);
+};
+
 $(function() {
 var fileSelect = document.getElementById("fileSelect"),
     fileElem = document.getElementById("fileElem");
@@ -539,5 +544,21 @@ fileSelect.addEventListener("click", function (e) {
     fileElem.click();
   }
   e.preventDefault(); // prevent navigation to "#"
+}, false);
+
+var wrapLink = document.getElementById("wrapToggle"),
+    wrapCheck = document.getElementById("wrapCheck");
+
+// Associate link with checkbox
+wrapLink.addEventListener("click", function (e) {
+  if (wrapCheck) {
+    wrapCheck.click();
+  }
+  e.preventDefault();
+}, false);
+
+// Hook check box and actually change wrapping behavior
+wrapCheck.addEventListener("click", function(e) {
+  setWrapping(this.checked);
 }, false);
 });
