@@ -568,5 +568,5 @@ wrapLink.addEventListener("click", function (e) {
   e.preventDefault();
 }, false);
 
-setWrapping(true);
+setWrapping(false);
 });
