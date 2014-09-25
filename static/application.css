@@ -119,6 +119,14 @@ color:#8d8dbd;
 	margin:10px;
 }
 
+#lang-label {
+  display: inline
+}
+#cur-lang {
+  color: #fff;
+  display: inline
+}
+
 #actions {
 	text-align:center;
 }

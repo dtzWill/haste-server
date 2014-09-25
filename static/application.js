@@ -149,6 +149,12 @@ haste.prototype.setTitle = function(ext) {
   document.title = title;
 };
 
+// Display currently used language highlighting
+setLang = function(lang) {
+  console.log("setLang() " + lang);
+  $('#cur-lang').text(lang);
+};
+
 // Show a message box
 haste.prototype.showMessage = function(msg, cls) {
   var msgBox = $('<li class="'+(cls || 'info')+'">'+msg+'</li>');
@@ -315,6 +321,7 @@ haste.prototype.loadDocument = function(key) {
       _this.$textarea.val('').hide();
       _this.$box.show().focus();
       _this.addLineNumbers(ret.lineCount);
+      setLang(ret.language);
       _this.updateRecents();
     }
     else {
