@@ -11,6 +11,7 @@
   -webkit-text-size-adjust: none;
 }
 
+.hljs-message_prefix,
 .hljs-shebang,
 .hljs-comment,
 .hljs-template_comment,
@@ -18,6 +19,7 @@
   color: #7c7c7c;
 }
 
+.hljs-nick,
 .hljs-keyword,
 .hljs-tag,
 .hljs-command,
@@ -27,6 +29,7 @@
   color: #96cbfe;
 }
 
+.hljs-timestamp,
 .hljs-sub .hljs-keyword,
 .method,
 .hljs-list .hljs-title,
@@ -34,6 +37,7 @@
   color: #ffffb6;
 }
 
+.hljs-link_url,
 .hljs-string,
 .hljs-tag .hljs-value,
 .hljs-cdata,
@@ -55,6 +59,7 @@
   color: #e9c062;
 }
 
+.hljs-timestamp_full,
 .hljs-title,
 .hljs-sub .hljs-identifier,
 .hljs-pi,
@@ -71,6 +76,7 @@
   color: #ffffb6;
 }
 
+.hljs-nick_rank,
 .hljs-symbol,
 .ruby .hljs-symbol .hljs-string,
 .hljs-number,
