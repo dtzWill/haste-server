@@ -48,6 +48,10 @@ textarea {
 #textcontent {
 	margin:10px 0 0 195px;
 	height:98%;
+  /* Set tab width to '2' if supported */
+  -o-tab-size: 2;
+  -moz-tab-size: 2;
+  tab-size: 2;
 }
 
 /* the line numbers */
