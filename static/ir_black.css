@@ -11,7 +11,9 @@
   -webkit-text-size-adjust: none;
 }
 
-.hljs-message_prefix,
+.hljs-timestamp_styled,
+.hljs-info,
+.hljs-nick_full,
 .hljs-shebang,
 .hljs-comment,
 .hljs-template_comment,
@@ -59,7 +61,6 @@
   color: #e9c062;
 }
 
-.hljs-timestamp_full,
 .hljs-title,
 .hljs-sub .hljs-identifier,
 .hljs-pi,
