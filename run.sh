@@ -4,11 +4,13 @@ ROOT=$(readlink -f $(dirname $0))
 
 DATA_DIR=$ROOT/data
 
+DBNAME=haste-redis
+
 mkdir -p $DATA_DIR
 
-docker run -d -p 6379:6379 -v $DATA_DIR:/data --name redis dockerfile/redis
+docker run -d -v $DATA_DIR:/data --name $DBNAME redis redis-server --appendonly yes
 
-docker run -p 127.0.0.1:7777:7777 --link redis:redis wdtz/hastebin
+docker run --rm -p 127.0.0.1:7777:7777 --name dtzso --link $DBNAME:redis wdtz/hastebin
 
-docker stop redis
-docker rm redis
+docker stop $DBNAME
+docker rm $DBNAME
